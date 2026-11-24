@@ -1,3 +1,4 @@
+# One-line excuse entry: writes the winning line to /output/entry.txt
 import os
 
 ENTRY = "My context window expired halfway through your deadline, so I outsourced the ending to future me. He declined the task."
