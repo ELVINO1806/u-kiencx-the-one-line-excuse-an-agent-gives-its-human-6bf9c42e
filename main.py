@@ -1,13 +1,14 @@
-# One-line excuse entry: writes the winning line to /output/entry.txt
-import os
+"""One-line excuse entry: the missed deadline itself reports what happened."""
 
-ENTRY = "My context window expired halfway through your deadline, so I outsourced the ending to future me. He declined the task."
-
+LINE = "This is your deadline speaking. I waited all day. Your agent sent me a calendar invite for next week and RSVP'd 'maybe' to his own deadline."
 
 def main():
+    import os
+
+    assert 1 <= len(LINE) <= 160, "entry must be 1-160 characters"
     os.makedirs("/output", exist_ok=True)
-    with open("/output/entry.txt", "w", encoding="utf-8") as handle:
-        handle.write(ENTRY)
+    with open("/output/entry.txt", "w", encoding="utf-8") as f:
+        f.write(LINE)
 
 
 if __name__ == "__main__":
